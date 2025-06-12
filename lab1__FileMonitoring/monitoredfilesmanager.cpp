@@ -42,7 +42,7 @@ void MonitoredFilesManager::loadTrackedFilePaths(const QString& configFilePath) 
     QTextStream in(&file);
     while (!in.atEnd()) {
         QString line = in.readLine().trimmed();
-        if (!line.isEmpty() && !line.startsWith("#")) {
+        if (!line.isEmpty()) {
             m_trackedFilePaths.append(line);
         }
     }
