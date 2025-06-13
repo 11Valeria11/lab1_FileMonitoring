@@ -37,7 +37,7 @@ public slots:
     }
 
     void onFileModified(const QString &filePath) {
-        QString message = QString("Файл '%1': ИЗМЕНЕН (размер).").arg(filePath);
+        QString message = QString("Файл '%1': ИЗМЕНЕН.").arg(filePath);
         if (m_logger) m_logger->log(message);
     }
 
