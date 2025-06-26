@@ -1,15 +1,11 @@
 #include "filestatesnapshot.h"
 #include <QFileInfo>
 
-FileStateSnapshot::FileStateSnapshot() {
-
-}
-
+FileStateSnapshot::FileStateSnapshot() { }
 
 void FileStateSnapshot::populate(const QStringList& filePaths) {
     m_fileDataList.clear();
     m_fileDataList.reserve(filePaths.size());
-
     for (const QString& path : filePaths) {
         QFileInfo qfi(path);
         qfi.refresh();
@@ -21,20 +17,11 @@ FileInfoData FileStateSnapshot::getFileInfo(int index) const {
     if (index >= 0 && index < m_fileDataList.size()) {
         return m_fileDataList.at(index);
     }
-
     return FileInfoData();
-}
-
-const QList<FileInfoData>& FileStateSnapshot::getAllData() const {
-    return m_fileDataList;
 }
 
 int FileStateSnapshot::count() const {
     return m_fileDataList.size();
-}
-
-void FileStateSnapshot::clear() {
-    m_fileDataList.clear();
 }
 
 void FileStateSnapshot::copyFrom(const FileStateSnapshot& other) {

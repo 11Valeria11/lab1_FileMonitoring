@@ -11,3 +11,4 @@ public:
 };
 
 #endif // CONSOLELOGGER_H
+

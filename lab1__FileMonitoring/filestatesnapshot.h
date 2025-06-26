@@ -11,19 +11,14 @@ struct FileInfoData {
 
     FileInfoData(const QString& path = QString(), bool ex = false, qint64 sz = -1)
         : filePath(path), exists(ex), size(sz) {}
-
-
 };
 
 class FileStateSnapshot {
 public:
     FileStateSnapshot();
-
     void populate(const QStringList& filePaths);
     FileInfoData getFileInfo(int index) const;
-    const QList<FileInfoData>& getAllData() const;
     int count() const;
-    void clear();
     void copyFrom(const FileStateSnapshot& other);
 
 private:
