@@ -42,5 +42,8 @@ C:\Users\sokol\OneDrive\Desktop\trpo\C.txt
 Программа начнёт выводить сообщения в консоль при изменении файлов. Для остановки программы нажмите Ctrl+C.
 
 ### UML
+![uml](https://github.com/user-attachments/assets/5fa5e0c1-b780-4a03-95a0-6434cf07d49d)
 
-![диаграмма2](https://github.com/user-attachments/assets/65e87630-c946-429b-a62d-ba0c26de0e3e)
+
+
+
